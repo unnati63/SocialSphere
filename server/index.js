@@ -14,6 +14,7 @@ const messageRoute=require("./routes/messages");
 const commentRoute=require('./routes/comments');
 const uploadRoute=require('./routes/upload');
 
+const PORT= process.env.PORT || 8800;
 var cors=require('cors');
 app.use(cors());
 
@@ -60,6 +61,6 @@ app.use("/messages",messageRoute);
 app.use("/comments",commentRoute);
 app.use("/upload", uploadRoute);
 
-app.listen(8800,()=>{
+app.listen(PORT,()=>{
     console.log("Backend server is running");
 })
