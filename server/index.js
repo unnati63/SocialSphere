@@ -61,6 +61,15 @@ app.use("/messages",messageRoute);
 app.use("/comments",commentRoute);
 app.use("/upload", uploadRoute);
 
+app.get('/', (req, res) => {
+    res.send('Hello, world!');
+});
+
+
+app.use((req, res, next) => {
+    res.status(404).send('Route not found');
+});
+
 app.listen(PORT,()=>{
     console.log("Backend server is running");
 })
