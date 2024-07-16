@@ -16,13 +16,7 @@ const uploadRoute=require('./routes/upload');
 
 const PORT= process.env.PORT || 8800;
 var cors=require('cors');
-app.use(cors(
-    {
-        origin:["https://social-spherefrontend-gnhg3pn45-unnati-shrivastavas-projects.vercel.app/"],
-		credentials:true,
-
-    }
-));
+app.use(cors());
 
 dotenv.config();
 
