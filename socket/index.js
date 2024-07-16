@@ -3,7 +3,7 @@ const io=require("socket.io")({
         // "http://localhost:3000":true,
         // "http://localhost:8800":true,
 
-        origin: ["http://localhost:3000", "http://localhost:8800"],
+        origin: ["http://localhost:3000", "https://socialsphere-backend-7fd7.onrender.com"],
     }
 });
 io.listen(8900);
